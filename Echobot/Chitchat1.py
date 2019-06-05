@@ -7,7 +7,7 @@ bot_template = "Bot: {0}"
 user_template = "User: {0}"
 
 # Define variables
-name = "Greg"
+name = "Manu"
 weather = "cloudy"
 
 # Define a dictionary with the predefined responses
