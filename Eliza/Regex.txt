@@ -1,0 +1,36 @@
+Text Munging with RE:
+
+REs:
+-> match messages against known patterns.
+-> extract key phrases.
+-> transform sentences grammatically.
+
+# Pattern matching
+
+import re
+.* : match any string of character
+
+match = re.search(pattern, message)
+
+# Extracting key phrases:
+
+pattern = "if (.*)"
+message = "what would happen if bots took over the world"
+match = re.search(pattern, message)
+match.group(0)
+# "what would happen if bots took over the world"
+match.group(1)
+# "bots took over the world"
+
+
+# Grammatical transformation
+
+import re
+
+def swap_pronouns(phrase):
+	if 'I' in phrase:
+		return re.sub('I', 'you', phrase)
+	if 'my' in phrase:
+		return re.sub('my', 'your', phrase)
+	else:
+		return phrase
